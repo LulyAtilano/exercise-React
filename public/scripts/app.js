@@ -65,16 +65,23 @@ var render = function render() {
         React.createElement(
             "ol",
             null,
-            React.createElement(
-                "li",
-                null,
-                " Item One "
-            ),
-            React.createElement(
-                "li",
-                null,
-                " Item Twoo "
-            )
+
+            /* Large option of map method
+            app.options.map((option) => {
+              return <li key={option}> {option} </li>;
+            })
+            */
+
+            //Short option of map method
+            app.options.map(function (option) {
+                return React.createElement(
+                    "li",
+                    { key: option },
+                    " ",
+                    option,
+                    " "
+                );
+            })
         ),
         React.createElement(
             "form",

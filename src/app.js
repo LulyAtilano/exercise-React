@@ -34,8 +34,16 @@ const render = () => {
             <p>{app.options.length}</p>
             <button onClick={onRemoveAll}> Remove All </button>
             <ol>
-                <li> Item One </li>
-                <li> Item Twoo </li>
+                {
+                    /* Large option of map method
+                    app.options.map((option) => {
+                      return <li key={option}> {option} </li>;
+                    })
+                    */
+                    
+                    //Short option of map method
+                    app.options.map((option) => <li key={option}> {option} </li>)
+                }
             </ol>
             <form onSubmit={onFormSubmit}>
                 <input type="text" name="option" />
