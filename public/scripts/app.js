@@ -50,11 +50,6 @@ var Counter = function (_React$Component) {
             this.setState({
                 count: 0
             });
-            this.setState(function (prevState) {
-                return {
-                    count: prevState.count + 1
-                };
-            });
 
             //Otra forma de usar el setState
             /*this.setState({

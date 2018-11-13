@@ -31,11 +31,6 @@ class Counter extends React.Component {
         this.setState({
             count: 0
         });
-        this.setState((prevState) => {
-            return {
-                count: prevState.count + 1
-            };
-        });
         
         //Otra forma de usar el setState
         /*this.setState({
