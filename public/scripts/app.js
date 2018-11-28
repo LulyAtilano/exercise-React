@@ -17,7 +17,7 @@ var IndecisionApp = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (IndecisionApp.__proto__ || Object.getPrototypeOf(IndecisionApp)).call(this, props));
 
         _this.state = {
-            options: props.options
+            options: []
         };
 
         _this.handleDeleteOptions = _this.handleDeleteOptions.bind(_this);
@@ -83,7 +83,6 @@ var IndecisionApp = function (_React$Component) {
     }, {
         key: 'handleAddOption',
         value: function handleAddOption(option) {
-            console.log(option);
             if (!option) {
                 return 'Enter valid value to add item';
             } else if (this.state.options.indexOf(option) > -1) {
@@ -121,10 +120,6 @@ var IndecisionApp = function (_React$Component) {
 }(React.Component);
 
 ;
-
-IndecisionApp.defaultProps = {
-    options: []
-};
 
 var Header = function Header(props) {
     return React.createElement(
